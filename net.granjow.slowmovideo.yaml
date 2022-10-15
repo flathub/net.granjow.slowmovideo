@@ -1,6 +1,6 @@
 app-id: net.granjow.slowmovideo
 runtime: org.kde.Platform
-runtime-version: '5.15-21.08'
+runtime-version: 5.15-21.08
 sdk: org.kde.Sdk
 
 command: slowmoUI
@@ -22,7 +22,7 @@ modules:
     buildsystem: cmake-ninja
     builddir: true
     cleanup:
-        - '/include/'
+      - /include/
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DOPENCV_GENERATE_PKGCONFIG=ON
@@ -43,9 +43,9 @@ modules:
       # - -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-master/modules ../opencv-master
       #- -DBUILD_LIST=calib3d,core,dnn,features2d,flann,highgui,imgcodecs,imgproc,java_bindings_generator,ml,objdetect,photo,python_bindings_generator,python_tests,stitching,video,videoio
     sources:
-        - type: archive
-          url: https://github.com/opencv/opencv/archive/3.4.18.tar.gz
-          sha256: d6a69aa4a775a074662685b9bc2b07b88fb867f19d939b03ad281571b62f2620
+      - type: archive
+        url: https://github.com/opencv/opencv/archive/3.4.18.tar.gz
+        sha256: d6a69aa4a775a074662685b9bc2b07b88fb867f19d939b03ad281571b62f2620
 
   - ffmpeg.yaml
 
@@ -53,26 +53,27 @@ modules:
     buildsystem: cmake-ninja
     builddir: true
     post-install:
-        - install -D -ma+r /app/share/icons/AppIcon.png /app/share/icons/hicolor/256x256/apps/AppIcon.png
-        - install -D -m644 ../net.granjow.slowmovideo.appdata.xml /app/share/appdata/net.granjow.slowmovideo.appdata.xml
+      - install -D -ma+r /app/share/icons/AppIcon.png /app/share/icons/hicolor/256x256/apps/AppIcon.png
+      - install -D -m644 ../net.granjow.slowmovideo.appdata.xml /app/share/appdata/net.granjow.slowmovideo.appdata.xml
     sources:
         ## Unfortunately, the archive does not contain the necessary submodules
         #- type: archive
         #  url:  https://github.com/slowmoVideo/slowmoVideo/archive/refs/tags/v0.6.tar.gz
         #  sha256: 26eafe66f1f48da2781cda6bf824fa41f92880e7e52166ed4eabe55a592fd62c
-        - type: git
-          url:  https://github.com/slowmoVideo/slowmoVideo.git
+      - type: git
+        url: https://github.com/slowmoVideo/slowmoVideo.git
           #tag: v0.6
           #commit: 08536c2e7887e3bf12973994f0365716528c7f16
           # We don't use the release version because it uses a git:-URL submodule
-          commit: c2e4df05fcc6d7dcd75705e08c5a858ecd3ad298
-          x-checker-data:
-            type: git
+        commit: 08536c2e7887e3bf12973994f0365716528c7f16
+        x-checker-data:
+          type: git
 
         # https://github.com/slowmoVideo/slowmoVideo/issues/200
-        - type: patch
-          path: cmake.diff
+        tag: v0.6
+      - type: patch
+        path: cmake.diff
 
         # https://github.com/slowmoVideo/slowmoVideo/issues/201
-        - type: file
-          path: net.granjow.slowmovideo.appdata.xml
+      - type: file
+        path: net.granjow.slowmovideo.appdata.xml
