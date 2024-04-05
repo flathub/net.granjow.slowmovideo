@@ -49,11 +49,11 @@ config-opts:
 
 sources:
   - type: archive
-    url: https://ffmpeg.org/releases/ffmpeg-4.4.tar.xz
-    sha256: 06b10a183ce5371f915c6bb15b7b1fffbe046e8275099c96affc29e17645d909
+    url: https://ffmpeg.org/releases/ffmpeg-7.0.tar.xz
+    sha256: 4426a94dd2c814945456600c8adfc402bee65ec14a70e8c531ec9a2cd651da7b
     x-checker-data:
-          type: anitya
-          project-id: 5405
-          url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
+      type: anitya
+      project-id: 5405
+      url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
 cleanup:
   - /share/ffmpeg/examples
