@@ -15,10 +15,13 @@
     How does slow motion work? slowmoVideo tries to find out where pixels move in the video (this information is called Optical Flow), and then uses this information to calculate the additional frames between the ones recorded by your camera.</p>
   </description>
   <screenshots>
-    <screenshot>
-      <image type="source">http://slowmovideo.granjow.net/pngGUI/newProject.png</image>
-      <image type="source">http://slowmovideo.granjow.net/pngGUI/simpleCurveAnnotated.png</image>
+    <screenshot type="default">
+      <caption>Bezier curve</caption>
       <image type="source">http://slowmovideo.granjow.net/pngGUI/bezierCurve.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>New project</caption>
+      <image type="source">http://slowmovideo.granjow.net/pngGUI/newProject.png</image>
     </screenshot>
   </screenshots>
   <releases>
