@@ -1,6 +1,6 @@
 app-id: net.granjow.slowmovideo
 runtime: org.kde.Platform
-runtime-version: '5.15-21.08'
+runtime-version: '5.15-24.08'
 sdk: org.kde.Sdk
 
 command: slowmoUI
@@ -46,8 +46,8 @@ modules:
         - type: archive
           url: https://github.com/opencv/opencv/archive/3.4.18.tar.gz
           sha256: d6a69aa4a775a074662685b9bc2b07b88fb867f19d939b03ad281571b62f2620
-
-  - ffmpeg.yaml
+    modules:
+      - ffmpeg.yaml
 
   - name: slomoVideo
     buildsystem: cmake-ninja
@@ -66,7 +66,7 @@ modules:
           #commit: 08536c2e7887e3bf12973994f0365716528c7f16
           # We don't use the release version because it uses a git:-URL submodule
           commit: c2e4df05fcc6d7dcd75705e08c5a858ecd3ad298
-          xx-checker-data:
+          x-checker-data:
             type: git
 
         # https://github.com/slowmoVideo/slowmoVideo/issues/200
