@@ -46,8 +46,8 @@ modules:
         - type: archive
           url: https://github.com/opencv/opencv/archive/3.4.18.tar.gz
           sha256: d6a69aa4a775a074662685b9bc2b07b88fb867f19d939b03ad281571b62f2620
-
-  - ffmpeg.yaml
+    modules:
+      - ffmpeg.yaml
 
   - name: slomoVideo
     buildsystem: cmake-ninja
