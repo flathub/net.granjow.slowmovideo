@@ -4,7 +4,7 @@
   <id>net.granjow.slowmovideo</id>
   <name>slomoVideo</name>
   <summary>slowmoVideo is an OpenSource program that creates slow-motion videos from your footage.</summary>
-  <developer>
+  <developer id="com.github.granjow">
     <name>Simon A. Eugster</name>
   </developer>
   <metadata_license>CC0-1.0</metadata_license>
