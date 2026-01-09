@@ -3,16 +3,22 @@
   <!--Created with jdAppStreamEdit 9.2-->
   <id>net.granjow.slowmovideo</id>
   <name>slomoVideo</name>
-  <summary>slowmoVideo is an OpenSource program that creates slow-motion videos from your footage.</summary>
-  <developer id="com.github.granjow">
+  <summary>Create slow-motion videos from your footage</summary>
+  <developer id="net.granjow">
     <name>Simon A. Eugster</name>
   </developer>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-only</project_license>
   <description>
-    <p>But it does not simply make your videos play at 0.01x speed. You can smoothly slow down and speed up your footage, optionally with motion blur.
-    
-    How does slow motion work? slowmoVideo tries to find out where pixels move in the video (this information is called Optical Flow), and then uses this information to calculate the additional frames between the ones recorded by your camera.</p>
+    <p>
+      But it does not simply make your videos play at 0.01x speed. You can smoothly slow
+      down and speed up your footage, optionally with motion blur.
+    </p>
+    <p>
+      How does slow motion work? slowmoVideo tries to find out where pixels move in the video
+      (this information is called Optical Flow), and then uses this information to calculate
+      the additional frames between the ones recorded by your camera.
+    </p>
   </description>
   <screenshots>
     <screenshot type="default">
@@ -25,13 +31,12 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="0.6.2" date="2026-01-08">
-      <description></description>
-    </release>
-    <release version="v0.6" date="2020-04-12" type="stable"/>
+    <release version="0.6.2" date="2026-01-08"/>
+    <release version="0.6" date="2020-04-12" type="stable"/>
   </releases>
-  <url type="homepage">http://slowmovideo.granjow.net/</url>
-  <url type="vcs-browser">https://github.com/slowmoVideo/slowmoVideo/</url>
+  <url type="homepage">http://slowmovideo.granjow.net</url>
+  <url type="bugtracker">https://github.com/slowmoVideo/slowmoVideo/issues</url>
+  <url type="vcs-browser">https://github.com/slowmoVideo/slowmoVideo</url>
   <content_rating type="oars-1.1"/>
   <launchable type="desktop-id">net.granjow.slowmovideo.desktop</launchable>
 </component>
