@@ -55,6 +55,6 @@ sources:
           project-id: 5405
           url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
           versions:
-            <: 5
+            <: "5"
 cleanup:
   - /share/ffmpeg/examples
